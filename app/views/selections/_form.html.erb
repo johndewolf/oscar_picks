@@ -1,0 +1,22 @@
+<%= simple_form_for @selection do |f| %>
+  <div class="row">
+    <div class="small-12 columns">
+      <%= f.error_notification %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <%= f.input :best_picture, collection: [["American Sniper", 'American Sniper'],[false, 'No']] %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <%= f.input :best_actor, placeholder: '' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <%= f.button :submit %>
+    </div>
+  </div>
+<% end %>

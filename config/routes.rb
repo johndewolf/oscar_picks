@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users, only: :show
-  resources :user_picks
+  resources :selections
   # You can have the root of your site routed with "root"
   root 'pages#home'
 
