@@ -33,6 +33,7 @@ gem "twitter-bootstrap-rails"
 
 group :test, :development do
   gem 'rspec-rails'
+  gem 'pry'
   gem 'shoulda-matchers'
   gem 'capybara'
   gem 'capybara-webkit'

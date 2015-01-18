@@ -4,7 +4,14 @@ class SelectionsController < ApplicationController
   end
 
   def create
-  	@selection = current_user.selection.build(selection_params)
+  	@selection = current_user.selections.create(selection_params)
+
+    if @selection.save
+      redirect_to user_path(current_user),
+        notice: "Oscar picks have been selected!"
+    else
+      render :new
+    end
   end
 
   def delete
