@@ -4,7 +4,7 @@ class SelectionsController < ApplicationController
   end
 
   def create
-  	@selection = current_user.selections.create(selection_params)
+  	@selection = current_user.selection.build(selection_params)
   end
 
   def delete
