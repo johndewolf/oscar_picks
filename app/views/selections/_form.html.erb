@@ -5,13 +5,13 @@
     </div>
   </div>
   <div class="row">
-    <div class="small-12 columns">
+    <div class="small-6 columns">
       <%= f.input :best_picture, collection: [["American Sniper", 'American Sniper'],['The Imitation Game', 'The Imitation Game'], ['Birdman or (The Unexpected Virtue of Ignorance)', 'Birdman or (The Unexpected Virtue of Ignorance)'], ['Selma', 'Selma'], ['Boyhood', 'Boyhood'], ['The Theory of Everything', 'The Theory of Everything'], ['The Grand Budapest Hotel', 'The Grand Budapest Hotel'], ['Whiplash', 'Whiplash']], as: :radio_buttons %>
     </div>
   </div>
   <div class="row">
-    <div class="small-12 columns">
-      <%= f.input :best_actor, placeholder: '' %>
+    <div class="small-6 columns">
+      <%= f.input :best_actor, collection: [['Steve Carell', 'Steve Carell'], ['Michael Keaton', 'Michael Keaton'],['Bradley Cooper', 'Bradley Cooper'], ['Eddie Redmayne', 'Eddie Redmayne'], ['Benedict Cumberbatch', 'Benedict Cumberbatch']], as: :radio_buttons %>
     </div>
   </div>
   <div class="row">
