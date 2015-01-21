@@ -6,7 +6,7 @@ gem 'rails', '4.1.5'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
+# gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
@@ -27,9 +27,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'devise'
 gem 'simple_form'
-gem "therubyracer"
-gem "less-rails"
-gem "twitter-bootstrap-rails"
+gem 'foundation-rails'
+
 
 group :test, :development do
   gem 'rspec-rails'
