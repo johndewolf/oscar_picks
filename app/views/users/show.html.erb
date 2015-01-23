@@ -1,6 +1,11 @@
 <h1>Hi <%= @user.first_name %></h1>
 
 <p><% @oscar_selections.each do |selection| %></p>
-  <li>Best picture: <%= selection.best_picture %></li>
-  <li>Best actor: <%= selection.best_actor %></li>
+	<li>Year: <%= selection.year %></li>
+		<ul>
+  		<li>Best picture: <%= selection.best_picture %></li>
+  		<li>Best actor: <%= selection.best_actor %></li>
+  	</ul>
+  <li><h3><%= link_to 'Edit my current Oscar picks', edit_selection_path(selection) %> </h3></li>
 <% end %>
+

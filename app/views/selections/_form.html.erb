@@ -1,8 +1,12 @@
 <%= simple_form_for @selection do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
   <div class="row">
     <div class="small-12 columns">
       <%= f.error_notification %>
     </div>
+  </div>
+  <div class="row">
+    <li>Year: 2015</li>
   </div>
   <div class="row">
     <div class="small-6 columns">

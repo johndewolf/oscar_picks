@@ -17,17 +17,24 @@ class SelectionsController < ApplicationController
   def delete
   end
 
-  def show
-  	@selection = Selection.find(params[:id])
+  def edit
+    @selection = current_user.selections.find(params[:id])
   end
 
-  def edit
+  def update
+    @user = current_user
+    @selection = current_user.selections.find(params[:id])
+      if @selection.update(selection_params)
+        redirect_to @user, notice: 'Oscar picks were successfully updated.'
+      else
+        render action: 'edit'
+      end
   end
 
 
   private
 
   def selection_params
-    params.require(:selection).permit(:best_picture, :best_actor, :user)
+    params.require(:selection).permit(:best_picture, :best_actor, :user, :year)
   end
 end

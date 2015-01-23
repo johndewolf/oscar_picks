@@ -1,3 +1,9 @@
 <h1>Hi</h1>
 
-<h2><%= link_to "Create a new selection", new_selection_path, :method => "get" %></h2>
+<% if user_signed_in? %>
+	<% if current_user.selections.where("year = Date.today.year") %>
+		<h2><%= link_to "View your " + Date.today.year.to_s + " selections", current_user %></h2>
+	<% else %>
+		<h2><%= link_to "Create your Oscar selections for {Date.today.year}", new_selection_path, :method => "get" %></h2>
+	<% end %>
+<% end %>

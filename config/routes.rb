@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :path => '', :path_names => {:sign_in => 'sign_in', :sign_out => 'sign_out'}
   resources :users, only: :show
   resources :selections
   # You can have the root of your site routed with "root"
